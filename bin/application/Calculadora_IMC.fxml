@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.Calculadora_IMCController" stylesheets="/css/style.css">
+	<!--   -->
+<VBox alignment="CENTER">
+
+<Label fx:id="etiqueta" text="introduce tu peso y altura" style="-fx-text-alignment:center;"/>
+
+</VBox>
+
+<HBox alignment="CENTER" >
+<Slider fx:id="slider" min="0" max="100" value="0"
+		majorTickUnit="25" minorTickCount="5" blockIncrement="10"
+		showTickMarks="true" showTickLabels="true" />
+	<TextField fx:id="peso" editable="false"  />
+	<Label id="kg" text="Kg."/>	
+</HBox>
+<HBox alignment="CENTER">
+<Label id="altura" text="Altura"/>
+<TextField fx:id="altura_dato" editable="true"  />	
+<Label id="cm" text="en cm."/>
+<!-- AQUI HAY QUE METER EL METODO QUE MANEJE EL CALCULOonAction="" -->
+<Button fx:id="calcular_imc" text="calcular IMC" />
+<TextField fx:id="resultado" editable="false"  />
+<Label id="porcentaje" text="en %."/>
+</HBox>
+
+</VBox>
+

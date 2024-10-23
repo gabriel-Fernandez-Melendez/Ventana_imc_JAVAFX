@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.EjemploController" stylesheets="/css/style.css">
+	<!-- TODO Add Nodes -->
+	<MenuBar fx:id="menuBar" focusTraversable="true">
+		<menus>
+			<Menu text="File">
+				<items>
+					<MenuItem text="Open" />
+					<MenuItem text="Save" />
+					<MenuItem text="Save As" />
+					<SeparatorMenuItem />
+					<MenuItem text="Exit" onAction="#handleSalirApp"/>
+				</items>
+			</Menu>
+			<Menu text="JavaFX Ejemplos">
+				<items>
+					<MenuItem text="Text Example" />
+					<MenuItem text="Objects Example" />					
+				</items>
+			</Menu>
+			<Menu text="Help">
+				<items>
+					<MenuItem text="Search" disable="true" />
+					<MenuItem text="Online Manual" visible="false" />
+					<SeparatorMenuItem />
+					<MenuItem text="About" />
+				</items>
+			</Menu>
+		</menus>
+	</MenuBar>
+	
+	<!-- Label -->
+	<Label fx:id="etiqueta" text="Bienvenido a JavaFX"
+		style="-fx-text-fill:blue;-fx-font-weight: bold; -fx-text-alignment:center;" />
+	<Label fx:id="lbnombre" text="Indique su Nombre:" />
+	
+	<!-- TextField -->
+	<TextField fx:id="txtNombre" />
+	<Label fx:id="lbnpasswd" text="Indique su Password" />
+	
+	<!-- PasswordField -->
+	<PasswordField fx:id="clave" />
+	
+	<!-- Button -->
+	<Button fx:id="saluda" text="Saludador"
+		style="-fx-font-size: 14px;" onAction="#handleSaludaClick" />
+
+	<!-- ChoicBox -->
+	<Label text="Ejemplo de ChoiceBox" />
+	<ChoiceBox fx:id="choiceBox" />
+
+	<!-- Barra de Progreso -->
+	<Label text="Ejemplo de Barra de Progreso" />
+	<ProgressBar fx:id="progressBar" prefWidth="300" />
+
+	<!-- Indicador de progreso -->
+	<Label text="Ejemplo de ProgressIndicator" />
+	<ProgressIndicator fx:id="progressIndicator"
+		prefWidth="150" prefHeight="150" />
+
+	<!-- Slider -->
+	<Label text="Ejemplod de Slider" />
+	<!-- Slider para seleccionar un valor -->
+	<Slider fx:id="slider" min="0" max="100" value="0"
+		majorTickUnit="25" minorTickCount="5" blockIncrement="10"
+		showTickMarks="true" showTickLabels="true" />
+	<Label fx:id="lbslider" text="Valor 0" />
+	<!-- CheckBox -->
+	<Label text="Ejemplo de CheckBox" />
+	<HBox xmlns:fx="http://javafx.com/fxml/1">
+		<CheckBox fx:id="checkBox1" text="Opción 1" />
+		<CheckBox fx:id="checkBox2" text="Opción 2" />
+		<CheckBox fx:id="checkBox3" text="Opción 3" />
+	</HBox>
+	<!-- RadioButton -->
+	<Label text="Ejemplo de RadioButton" />
+	<Label text="Selecciona una color" />
+	<RadioButton fx:id="radioButton1" text="Rojo" />
+	<RadioButton fx:id="radioButton2" text="Verde" />
+	<RadioButton fx:id="radioButton3" text="Azul" />
+
+	<!-- Lista de Valores ListView -->
+	<Label text="Ejemplo de ListView" />
+	<ListView fx:id="miLista" prefHeight="200" prefWidth="80" />
+
+	<!-- TableView -->
+	
+	<Label text="Ejemplo de TableView" />
+	<TableView fx:id="table" layoutX="14.0" layoutY="14.0"
+		prefHeight="300.0" prefWidth="500.0">
+		<columns>
+			<TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+			<TableColumn fx:id="name" prefWidth="75.0" text="Name" />
+			<TableColumn fx:id="surname" prefWidth="75.0"
+				text="Surname" />
+			<TableColumn fx:id="age" prefWidth="75.0" text="Age" />
+		</columns>
+	</TableView>
+
+</VBox>
+
