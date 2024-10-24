@@ -46,4 +46,30 @@ public class Calculadora_IMCController {
 	private Label porcentaje;
 	//vamos a intentar que ocupe todo lo que esta dentro de ese VBox
 	
+	@FXML
+	public void initialize() {	
+	slider.valueProperty().addListener((observable, oldValue, newValue) -> {
+		double sliderValue = newValue.doubleValue();            
+		// Llamamos al método que maneja el cambio de valor
+		handleSliderChange();
+	});
+	}
+	
+	@FXML
+	private void handleSliderChange() {
+		
+		// Listener para obtener el valor actualizado del Slider
+		slider.valueProperty().addListener(new ChangeListener<Number>() {
+			@Override
+			public void changed(ObservableValue<? extends Number> observableValor, Number oldValor, Number newValor) {
+				peso.textProperty().setValue(String.valueOf(newValor.intValue()));
+			}
+		});
+	}
+	
+	@FXML
+	private void altura() {
+		
+	}
+	
 }

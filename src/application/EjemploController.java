@@ -118,7 +118,7 @@ public class EjemploController {
 		slider.valueProperty().addListener((observable, oldValue, newValue) -> {
 			double sliderValue = newValue.doubleValue();            
 			// Llamamos al método que maneja el cambio de valor
-			handleSliderChange(sliderValue);
+			handleSliderChange();
 		});
 
 		//llamada al hancleCheckBox        
@@ -232,7 +232,7 @@ public class EjemploController {
 	 * @param newValue
 	 */
 	@FXML
-	private void handleSliderChange(double newValue) {
+	private void handleSliderChange() {
 		// Listener para obtener el valor actualizado del Slider
 		slider.valueProperty().addListener(new ChangeListener<Number>() {
 			@Override
